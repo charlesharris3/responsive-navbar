@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* The header that wraps the navbar */
+.navbar-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 2.5%;
+    background-color: grey;
+    align-items: center;
+    justify-content: space-between
+}
+
+/* The navbar */
+.navbar{
+    display: none;
+}
+
+/* The links inside the navbar */
+a{
+    margin: 0 .5%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* The menu icon for the navbar */
+a.menu-icon{
+    display: inline-block;
+}
+
+  /* CSS Responsive */
+  @media screen and (min-width: 600px) {
+    .navbar{ /*The full navbar will display when viewport is >600px.*/
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    a.menu-icon { /* The menu icon will no longer display when full navbar is. */
+        display: none;
+    }
+
+  }
