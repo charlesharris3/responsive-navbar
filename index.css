@@ -7,10 +7,17 @@
 .navbar-wrapper{
     display: flex;
     flex-direction: row;
-    padding: 2.5%;
+    padding: 2%;
     background-color: grey;
     align-items: center;
     justify-content: space-between
+}
+
+/* The logo */
+.logo{
+    font-size: .6rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2px;
 }
 
 /* The navbar */
@@ -18,12 +25,21 @@
     display: none;
 }
 
+/* The navbar is responsive */ 
+.navbar.responsive{
+    position: relative;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
 /* The links inside the navbar */
-a{
-    margin: 0 .5%;
-    padding: 10px;
+a {
+    padding: 5px;
     text-align: center;
-    font-size: 1.25em;
+    font-size: .85rem;
+    font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
     color: aliceblue;
 }
@@ -31,18 +47,26 @@ a{
 /* The menu icon for the navbar */
 a.menu-icon{
     display: inline-block;
+    font-size: 1rem;
 }
 
   /* CSS Responsive */
   @media screen and (min-width: 600px) {
     .navbar{ /*The full navbar will display when viewport is >600px.*/
         display: flex;
-        width: 100%;
         justify-content: flex-end;
     }
 
     a.menu-icon { /* The menu icon will no longer display when full navbar is. */
         display: none;
+    }
+
+    a{
+        font-size: 1rem;
+    }
+
+    .logo{
+        font-size: 1rem;
     }
 
   }
